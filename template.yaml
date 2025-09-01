@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS CloudFormation template for HelloWorld1 Lambda.
+
+Parameters:
+  CodeS3Bucket:
+    Type: String
+  CodeS3Key:
+    Type: String
+  ExecutionRoleArn:
+    Type: String
+
+Resources:
+  HelloWorld1Lambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: HelloWorld1
+      Runtime: python3.11
+      Handler: helloworld1.handler
+      Code:
+        S3Bucket: !Ref CodeS3Bucket
+        S3Key: !Ref CodeS3Key
+      Role: !Ref ExecutionRoleArn

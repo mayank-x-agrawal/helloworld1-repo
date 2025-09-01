@@ -1,0 +1,10 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - zip -r helloworld1.zip .
+artifacts:
+  files:
+    - helloworld1.zip
+    - template.yaml
+    - config.json
