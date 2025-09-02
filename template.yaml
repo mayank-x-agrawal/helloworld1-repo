@@ -17,6 +17,6 @@ Resources:
       Runtime: python3.11
       Handler: helloworld1.handler
       Code:
-        S3Bucket: !GetArtifactAtt ["BuildArtifacts", "BucketName"]
-        S3Key: !GetArtifactAtt ["BuildArtifacts", "ObjectKey"]
+        S3Bucket: !GetArtifactAtt [ "BuildArtifacts", "BucketName" ]
+        S3Key: !GetArtifactAtt [ "BuildArtifacts", "ObjectKey" ]
       Role: !Ref ExecutionRoleArn
