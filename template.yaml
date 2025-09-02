@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: AWS CloudFormation template for HelloWorld1 Lambda.
 
 Parameters:
-  CodeS3Bucket:
-    Type: String
-  CodeS3Key:
-    Type: String
+  # CodeS3Bucket:
+  #   Type: String
+  # CodeS3Key:
+  #   Type: String
   ExecutionRoleArn:
     Type: String
 
